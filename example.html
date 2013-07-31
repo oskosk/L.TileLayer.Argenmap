@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Ejemplo básico de Argenmap con Leaflet</title>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.3/leaflet.js"></script>
+    <script src="L.TileLayer.Argenmap.js"></script>
+    <script type="text/javascript">
+        var map, layer;
+        
+        function init(){
+            map = new L.Map('map').setView([-34, -59], 12);
+            layer = new L.TileLayer.Argenmap();
+            map.addLayer(layer);
+        }
+    </script>
+  </head>
+  <body onload="init()">
+    <h1 id="title">Ejemplo básico de Argenmap para Leaflet</h1>
+
+    <div id="shortdesc">Muestra un mapa simple de Argenmap</div>
+
+    <div id="map" class="smallmap" style="height:400px"></div>
+
+    <div id="docs">
+        <p>Este ejemplo muestra un mapa muy simple basado en Argenmap con los controles mínimos.</p> 
+    </div>
+  </body>
+</html>
