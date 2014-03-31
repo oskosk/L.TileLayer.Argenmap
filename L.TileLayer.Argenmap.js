@@ -5,11 +5,18 @@ L.TileLayer.Argenmap = L.TileLayer.extend({
    *         Set to the Golden Ratio per Knuth's recommendation.
    */
   IGN_CACHES : [
-    'http://cg.aws.af.cm/tms',
+/* estos caches estan desactualizados y no devuelven bien los tiles
+'http://cg.aws.af.cm/tms',
     'http://robomap-cgastrell.rhcloud.com/tms',
     'http://sig.ign.gob.ar/tms',
     'http://190.220.8.216/tms',
     'http://mapaabierto.aws.af.cm/tms'
+*/
+//estos andan OK (abril 2014)
+'http://igntiles1.ap01.aws.af.cm/tms',
+'http://190.220.8.216/tms',
+'http://mapaabierto.aws.af.cm/tms',
+'http://igntiles2.eu01.aws.af.cm/tms'
   ],
   cache: null,
   initialize: function (options) {
