@@ -14,7 +14,6 @@ L.TileLayer.Argenmap = L.TileLayer.extend({
 */
 //estos andan OK (abril 2014)
 'http://igntiles1.ap01.aws.af.cm/tms',
-'http://190.220.8.216/tms',
 'http://mapaabierto.aws.af.cm/tms',
 'http://igntiles2.eu01.aws.af.cm/tms'
   ],
