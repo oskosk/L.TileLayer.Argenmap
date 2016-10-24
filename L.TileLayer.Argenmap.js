@@ -9,13 +9,11 @@ L.TileLayer.Argenmap = L.TileLayer.extend({
   ],
   cache: null,
   initialize: function (options) {
-    console.log(this.options);
     this.cache = new this.CacheDeCliente();
     this.options = L.Util.extend({}, this.options, options, {
       tms:true,
       attribution: ' Topónimos, datos topográficos - 2013  <a target="_blank" href="http://www.ign.gob.ar/argenmap/argenmap.jquery/docs/#datosvectoriales">IGN Argentina // Calles - OpenStreetMap</a>',
     });
-    console.log(this.options);
     L.TileLayer.prototype.initialize.call(this, undefined, this.options);
   },
   getTileUrl: function( tilePoint ) {
@@ -35,7 +33,6 @@ L.TileLayer.Argenmap = L.TileLayer.extend({
       return cached;
     }
     var layerName = "capabaseargenmap@EPSG%3A3857@png";
-    console.log('pre');
     if (this.options.layer !== undefined) {
       layerName = this.options.layer;
     }
