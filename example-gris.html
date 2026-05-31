@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Capa base gris de Argenmap con Leaflet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <script src="L.TileLayer.Argenmap.js"></script>
+    <script type="text/javascript">
+        var map, layer;
+
+        function init(){
+            map = new L.Map('map').setView([-34, -59], 12);
+            // Capa base gris (mapabase_gris) del IGN.
+            layer = new L.TileLayer.Argenmap({
+                layer: 'mapabase_gris@EPSG%3A3857@png'
+            });
+            map.addLayer(layer);
+        }
+    </script>
+  </head>
+  <body onload="init()">
+    <h1 id="title">Capa base gris de Argenmap para Leaflet</h1>
+
+    <div id="shortdesc">Muestra la capa base gris (mapabase_gris) del IGN</div>
+
+    <div id="map" class="smallmap" style="height:400px"></div>
+
+    <div id="docs">
+        <p>Este ejemplo muestra cómo usar la capa base gris del IGN pasando el
+        nombre de la capa en la opción <code>layer</code> del constructor de
+        <code>L.TileLayer.Argenmap</code>.</p>
+    </div>
+  </body>
+</html>
