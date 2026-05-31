@@ -5,7 +5,7 @@ L.TileLayer.Argenmap = L.TileLayer.extend({
    *         Set to the Golden Ratio per Knuth's recommendation.
    */
   IGN_CACHES : [
-    'http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0'
+    'https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0'
   ],
   cache: null,
   initialize: function (options) {
